@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+
 import 'package:flutter/material.dart';
 import 'package:notes_app/widgets/custom_buttom.dart';
 import 'package:notes_app/widgets/custom_text_field.dart';
@@ -27,7 +27,7 @@ class AddNoteButtomSheet extends StatelessWidget {
                    SizedBox(height: 32),
                   CustomButton(onTab: () {  },),
                   SizedBox(
-                    height: 16,
+                    height: 40,
                   ),
           ],
         ),
