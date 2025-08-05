@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes_app/cubits/add_notes_cubit/add_notes_cubit.dart';
 import 'package:notes_app/cubits/add_notes_cubit/add_notes_state.dart';
@@ -50,13 +49,12 @@ class _AddNoteFormState extends State<AddNoteForm> {
                 isLoading: state is AddNotesLoading ? true : false,
                 onTab: () {
                   if (formKey.currentState!.validate()) {
-                    formKey.currentState!.save();
-
+                   formKey.currentState!.save();
                     var noteModel = NoteModel(
                       title: title!,
                       subtitle: subtitle!,
                       date: DateTime.now().toString(),
-                      color: Colors.blue.value,
+                      color: Colors.blue.toARGB32(),
                     );
                     BlocProvider.of<AddNotesCubit>(
                       context,
